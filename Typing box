@@ -1,0 +1,45 @@
+<html>
+<title></title>
+<head>
+<style>
+#box{
+    border:1px solid black;
+}
+p.blue{
+    background-color:blue;
+    font-family:arial;
+    font-size:20px;
+}
+p.green{
+     background-color:green;
+    font-family:Above The Sky ;
+    font-size:25px;
+}
+</style></head>
+<body>
+<textarea type="text" id="user" rows="10" cols="30"></textarea><br><br><br><br>
+<div id="box"><p>  </p></div>
+<h1>  What is jQuery </h1>
+<p class="blue"> jQuery is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax.</p>
+<h2>Advantage of jQuery</h2>
+<p class="green">The jQuery library simplifies a variety of programming operations, including:
+Event handling—user actions such as a mouse click, form submission etc</p>
+<p> Click the below button to change the properties of both the points</p>
+<button >Cilck here </button>
+<script src="jquery-3.5.0.js">
+</script>
+<script> 
+$(document).ready(function(){
+    $('#user').keypress(function(){
+ var a = $('#user').val();
+    $('#box p').html(a);
+     });
+});
+$(document).ready(function(){
+$('button').click(function(){
+$('.blue,.green').toggleClass("blue green");
+});
+});
+</script>
+</body>
+</html>
